@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+                <a id="planner" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-book-open"></i> Planner</a>
+                <a id="music" onclick="navigate(this.id)" href="#"> <i class="fa-brands fa-spotify"></i> Music</a>
+                <a id="teams" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-users"></i> Teams</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/maria-s-school-dashboard-a57531ce91eb472dbde910a88558d722", '_blank').focus();
+			else if (id == 'inbox')
+				window.open("https://mail.google.com/mail/u/0/#inbox", '_blank').focus();
+                        else if (id == 'planner')
+				window.open("https://calendar.google.com/calendar/u/0/r", '_blank').focus();
+                        else if (id == 'music')
+				window.open("https://open.spotify.com/", '_blank').focus();
+                        else if (id == 'teams')
+				window.open("https://www.microsoft.com/en-us/microsoft-teams/free?OCID=AID2000955_SEM_XMc93AAAAHlkbAvV:20200519185631:s&msclkid=000a8d25e133160ebb2cd3e1caefaeb8&ef_id=XMc93AAAAHlkbAvV:20200519185631:s", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
